@@ -1,0 +1,20 @@
+package com.elvismaicol.appemcmongo.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.elvismaicol.appemcmongo.domain.User;
+import com.elvismaicol.appemcmongo.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	@Autowired
+	private UserRepository repo;
+	
+	public List<User> finfAll() {
+		return repo.findAll();
+	}
+}
